@@ -20,8 +20,6 @@ MyNewFluidTempl<is_ad>::validParams()
 {
   InputParameters params = PorousFlowFluidPropertiesBaseTempl<is_ad>::validParams();
   params.addRequiredParam<UserObjectName>("fp", "The name of the user object for fluid properties");
-    params.addRequiredParam<RealVectorValue>("gravity",
-                                           "Gravitational acceleration vector downwards (m/s^2)");
   params.addClassDescription("This Material calculates fluid properties at the quadpoints or nodes "
                              "for a single component fluid");
   return params;
